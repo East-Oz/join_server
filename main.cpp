@@ -122,7 +122,7 @@ struct SAcceptor
 	ip::tcp::acceptor* m_acceptor = nullptr;
 }tagAcceptor;
 
-void Acceptor( ClientConnection::ptr client, const boost::system::error_code & err )
+void Acceptor( ClientConnection::ptr client, const boost::system::error_code& )
 {
 	client->Start();
 	ClientConnection::ptr new_client = ClientConnection::Create();
