@@ -84,8 +84,8 @@ public:
 
 private:
 	ECOMMAND m_eCommand;
-	int m_nId;
 	string m_sTable;
+	int m_nId;
 	string m_sValue;
 
 };
