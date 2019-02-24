@@ -8,7 +8,7 @@ find_package(Boost COMPONENTS system REQUIRED)
 
 add_executable( join_server main.cpp DataBase.h DataBase.cpp CommandObject.h )
 
-set_target_properties( bulk_server PROPERTIES
+set_target_properties( join_server PROPERTIES
 	CXX_STANDARD 14
 	CXX_STANDARD_REQUIRED ON
 	COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
