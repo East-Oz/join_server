@@ -89,7 +89,7 @@ private:
 		Write( response );
 	}
 
-	void OnWrite( const error_code & err, size_t bytes )
+	void OnWrite( const error_code&, size_t )
 	{
 		Read();
 	}
