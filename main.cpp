@@ -107,9 +107,7 @@ private:
 		socket.async_write_some( buffer( write_buffer, sizeof( response ) ),
 			boost::bind( &self_type::OnWrite, shared_from_this(), _1, _2 )
 			);
-
 	}
-
 private:
 	ip::tcp::socket socket;
 	char read_buffer[ 1000 ];
@@ -117,7 +115,6 @@ private:
 	bool _started;
 	int _client_id;
 };
-
 
 struct SAcceptor
 {
@@ -131,7 +128,6 @@ void Acceptor( ClientConnection::ptr client, const boost::system::error_code & e
 	ClientConnection::ptr new_client = ClientConnection::Create();
 	tagAcceptor.m_acceptor->async_accept( new_client->sock(), boost::bind( Acceptor, new_client, _1 ) );
 }
-
 
 int main( int argc, char* argv[] )
 {
@@ -147,5 +143,3 @@ int main( int argc, char* argv[] )
 	tagAcceptor.m_acceptor->async_accept( client->sock(), boost::bind( Acceptor, client, _1 ) );
 	service.run();
 }
-
-# for build

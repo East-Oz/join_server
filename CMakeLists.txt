@@ -14,11 +14,11 @@ set_target_properties( bulk_server PROPERTIES
 	COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 )
 
-set_target_properties(bulk_server PROPERTIES
+set_target_properties(join_server PROPERTIES
   INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-target_link_libraries(bulk_server
+target_link_libraries(join_server
   ${Boost_LIBRARIES}
 )
 
